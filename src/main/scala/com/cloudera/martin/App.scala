@@ -18,7 +18,7 @@ object App {
 //  def foo(x : Array[String]) = x.foldLeft("")((a,b) => a + b)
   
   def main(args : Array[String]) {
-    val conf = new SparkConf().setMaster("local[3]").setAppName("streaming-test")
+    val conf = new SparkConf().setMaster("yarn-cluster").setAppName("streaming-test")
     val sc = new SparkContext(conf)
 
     var batchInterval = 10
